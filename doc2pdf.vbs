@@ -1,10 +1,9 @@
 On Error Resume Next
-Dim ls_File 
-Set argv = WScript.Arguments 'ÃüÁîĞĞ²ÎÊı 
+Set argv = WScript.Arguments 'å‘½ä»¤è¡Œå‚æ•° 
 if argv.Count < 1 then
 	WScript.Quit
 end if
-Set docApp = CreateObject("Word.Application") 'ÉêÃ÷µ÷ÓÃº¯Êı 
+Set docApp = CreateObject("Word.Application") 'ç”³æ˜è°ƒç”¨å‡½æ•° 
 for i = 0 to (argv.Count - 1)
 	for j = 1 to 1
 		filename = argv(i)
@@ -22,5 +21,4 @@ for i = 0 to (argv.Count - 1)
 		MyPress.Close
 	next
 next
-
 docApp.Quit 
